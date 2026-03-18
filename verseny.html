@@ -37,22 +37,57 @@
                             <div class="card shadow quiz-selector-card h-100" onclick="startQuiz('magyarorszag')">
                                 <div class="card-body text-center">
                                     <h5 class="card-title">Magyarország Kvíz</h5>
-                                    <p class="text-muted small">Történelem és műveltség.</p>
+                                    <p class="text-muted small">Történelem és műveltség.<br>(100 kérdés)</p>
                                     <button class="btn btn-dark">Kitöltés</button>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-4 col-lg-3">
-                            <div class="card shadow quiz-selector-card h-100" onclick="startQuiz('magyarorszag')">
+                            <div class="card shadow quiz-selector-card h-100" onclick="startQuiz('tiszapart')">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title">Magyarország Kvíz</h5>
-                                    <p class="text-muted small">Történelem és műveltség.</p>
+                                    <h5 class="card-title">Tisza Párt Kvíz</h5>
+                                    <p class="text-muted small">Politikai ismeretek.<br>(20 kérdés)</p>
+                                    <button class="btn btn-dark">Kitöltés</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-3">
+                            <div class="card shadow quiz-selector-card h-100" onclick="startQuiz('fidesz')">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Fidesz-KDNP Kvíz</h5>
+                                    <p class="text-muted small">Politikai ismeretek.<br>(20 kérdés)</p>
+                                    <button class="btn btn-dark">Kitöltés</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-3">
+                            <div class="card shadow quiz-selector-card h-100" onclick="startQuiz('dk')">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Demokratikus Koalíció (DK)</h5>
+                                    <p class="text-muted small">Politikai ismeretek.<br>(20 kérdés)</p>
+                                    <button class="btn btn-dark">Kitöltés</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-3">
+                            <div class="card shadow quiz-selector-card h-100" onclick="startQuiz('mihazank')">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Mi Hazánk Mozgalom</h5>
+                                    <p class="text-muted small">Politikai ismeretek.<br>(20 kérdés)</p>
+                                    <button class="btn btn-dark">Kitöltés</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-3">
+                            <div class="card shadow quiz-selector-card h-100" onclick="startQuiz('mkkp')">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Magyar Kétfarkú Kutya Párt</h5>
+                                    <p class="text-muted small">Politikai ismeretek.<br>(20 kérdés)</p>
                                     <button class="btn btn-dark">Kitöltés</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div id="quiz-view" class="col-12 p-2 d-none">
                         <div class="card shadow">
                             <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
@@ -74,7 +109,6 @@
             </div>
         </div>
     </div>
-
     <script>
         // Itt tudod bővíteni a kvízeket kedved szerint
         const quizData = {
@@ -182,16 +216,133 @@
                 { q: "Melyik magyar király alapította a lovagi rendeket?", a: ["I. Károly (Róbert)", "Zsigmond", "Mátyás"], c: 0 },
                 { q: "Hány évet töltött száműzetésben Kossuth Lajos?", a: ["10", "45", "25"], c: 1 }
             ]
-            }
-        };
-            'matek': {
-                title: "Matek Kvíz",
-                questions: [
-                    { q: "Melyik a legkisebb prímszám?", a: ["1", "2", "3"], c: 1 },
-                    { q: "Mennyi 5 x 5?", a: ["20", "25", "30"], c: 1 }
-                ]
-            }
-        };
+            },
+            'tiszapart': {
+            title: "Tisza Párt Kvíz (20 kérdés)",
+            questions: [
+                { q: "Ki a Tisza Párt alapítója?", a: ["Magyar Péter", "Gyurcsány Ferenc", "Orbán Viktor"], c: 0 },
+                { q: "Melyik évben vált ismertté országosan a Tisza Párt?", a: ["2018", "2024", "2020"], c: 1 },
+                { q: "Milyen típusú szervezet a Tisza Párt?", a: ["Civil alapítvány", "Sportegyesület", "Politikai párt"], c: 2 },
+                { q: "Melyik választáson indult először jelentősebb támogatottsággal?", a: ["Önkormányzati választás", "Európai parlamenti választás", "Megyei választás"], c: 1 },
+                { q: "A Tisza Párt főként melyik ország politikájában aktív?", a: ["Magyarország", "Románia", "Szlovákia"], c: 0 },
+                { q: "Melyik folyóról kapta a nevét a párt?", a: ["Duna", "Dráva", "Tisza"], c: 2 },
+                { q: "Melyik téma jelenik meg gyakran a kommunikációban?", a: ["Politikai megújulás", "Űrkutatás", "Autóversenyzés"], c: 0 },
+                { q: "Hol aktív főként a támogatói bázis?", a: ["Postai levelezés", "Közösségi média", "Fax"], c: 1 },
+                { q: "Melyik korosztály megszólítása fontos?", a: ["Fiatal választók", "Csak nyugdíjasok", "Csak diákok"], c: 0 },
+                { q: "Milyen politikai szerepet hangsúlyoz?", a: ["Katonai vezetés", "Királyság visszaállítása", "Ellenzéki alternatíva"], c: 2 },
+                { q: "Mi növelte jelentősen az ismertséget?", a: ["Online beszédek és tüntetések", "Filmfesztivál", "Sportverseny"], c: 0 },
+                { q: "Gyakran előkerülő téma:", a: ["Mars-utazás", "Közéleti átláthatóság", "Divat"], c: 1 },
+                { q: "Milyen formában működik a párt?", a: ["Bank", "Egyetem", "Politikai mozgalom és párt"], c: 2 },
+                { q: "Melyik szó kapcsolódik leginkább az üzenetekhez?", a: ["Megújulás", "Kalózkodás", "Kolonizáció"], c: 0 },
+                { q: "A rendezvények jellemzően:", a: ["Zártkörűek", "Nyilvános politikai események", "Online játékok"], c: 1 },
+                { q: "Mi kap fontos szerepet a kommunikációban?", a: ["Gasztrofesztivál", "Divatbemutató", "Állampolgári részvétel"], c: 2 },
+                { q: "Megjelenése mely jelenséghez köthető?", a: ["Új politikai szereplők megjelenése", "Monarchia visszatérése", "Sportliga"], c: 0 },
+                { q: "Hol terjedtek gyorsan az üzenetek?", a: ["Közösségi videók", "Távirat", "Faxüzenet"], c: 0 },
+                { q: "Egy hangsúlyos cél:", a: ["Űrbázis építése", "Közéleti változás ösztönzése", "Tengerkutatás"], c: 1 },
+                { q: "A támogatói események gyakran:", a: ["Csak külföldön vannak", "Titkosak", "Nagy nyilvánosság előtt zajlanak"], c: 2 }
+            ]
+            },
+            'fidesz': {
+            title: "Fidesz-KDNP Kvíz (20 kérdés)",
+            questions: [
+                { q: "Mikor alapították a Fideszt?", a: ["1988", "1994", "2002"], c: 0 },
+                { q: "Ki a Fidesz legismertebb vezetője?", a: ["Gyurcsány Ferenc", "Orbán Viktor", "Magyar Péter"], c: 1 },
+                { q: "Melyik párttal alkot szövetséget a Fidesz?", a: ["Momentum", "Mi Hazánk", "KDNP"], c: 2 },
+                { q: "Mi a Fidesz teljes neve?", a: ["Fiatal Demokraták Szövetsége", "Független Demokratikus Szövetség", "Federális Demokraták Szövetsége"], c: 0 },
+                { q: "Melyik év óta kormányoz folyamatosan?", a: ["2002", "2010", "2018"], c: 1 },
+                { q: "Melyik ideológiai irányzathoz sorolják?", a: ["Anarchista", "Kommunista", "Konzervatív"], c: 2 },
+                { q: "Melyik nemzetközi pártcsaládhoz tartozott korábban?", a: ["Európai Néppárt", "Zöldek", "Szocialisták"], c: 0 },
+                { q: "Melyik politikai oldalon helyezik el általában?", a: ["Baloldal", "Jobboldal", "Szélsőbal"], c: 1 },
+                { q: "Mikor került először kormányra a Fidesz?", a: ["2010", "2006", "1998"], c: 2 },
+                { q: "Melyik ország politikájában működik a Fidesz?", a: ["Magyarország", "Lengyelország", "Ausztria"], c: 0 },
+                { q: "Ki a miniszterelnök 2010 óta?", a: ["Bajnai Gordon", "Orbán Viktor", "Medgyessy Péter"], c: 1 },
+                { q: "Milyen szervezet a Fidesz?", a: ["Sportklub", "Szakszervezet", "Politikai párt"], c: 2 },
+                { q: "Melyik választáson szerez mandátumokat?", a: ["Országgyűlési választás", "Iskolai választás", "Vállalati szavazás"], c: 0 },
+                { q: "Melyik korszakban alakult a párt?", a: ["1950-es években", "Rendszerváltás idején", "Világháború alatt"], c: 1 },
+                { q: "A Fidesz rövidítése eredetileg mire utalt?", a: ["Fővárosi Demokraták Szövetsége", "Független Demokrata Szövetség", "Fiatal Demokraták Szövetsége"], c: 2 },
+                { q: "Hol dolgoznak az országgyűlési képviselői?", a: ["Országgyűlés", "Európai Bizottság", "ENSZ"], c: 0 },
+                { q: "Melyik város a parlament központja?", a: ["Debrecen", "Budapest", "Szeged"], c: 1 },
+                { q: "A Fidesz politikájában hangsúlyos téma:", a: ["Mars-kutatás", "Kriptovaluta", "Nemzeti szuverenitás"], c: 2 },
+                { q: "Milyen választási rendszerben indul a párt?", a: ["Demokratikus választásokon", "Sorsolással", "Kinevezéssel"], c: 0 },
+                { q: "Melyik testületben alkotnak frakciót?", a: ["Bíróságon", "Országgyűlésben", "Jegybankban"], c: 1 }
+            ]
+            },
+            'dk': {
+            title: "Demokratikus Koalíció Kvíz (20 kérdés)",
+            questions: [
+                { q: "Melyik évben alakult meg a DK párttá?", a: ["2011", "2006", "2014"], c: 0 },
+                { q: "Ki a párt elnöke és legismertebb politikusa?", a: ["Dobrev Klára", "Gyurcsány Ferenc", "Molnár Csaba"], c: 1 },
+                { q: "Melyik korábbi nagy pártból vált ki a DK magja?", a: ["LMP", "Fidesz", "MSZP"], c: 2 },
+                { q: "Melyik európai integrációs szintet támogatja erősen a DK?", a: ["Európai Egyesült Államok", "Kilépés az EU-ból", "Nemzetek szuverén szövetsége"], c: 0 },
+                { q: "Ki volt a párt miniszterelnök-jelöltje a 2021-es előválasztáson?", a: ["Karácsony Gergely", "Dobrev Klára", "Márki-Zay Péter"], c: 1 },
+                { q: "Milyen szín dominál a párt logójában és arculatában?", a: ["Zöld", "Narancssárga", "Kék"], c: 2 },
+                { q: "Melyik ideológiai irányzathoz sorolják a DK-t?", a: ["Liberális balközép", "Konzervatív jobboldal", "Radikális nacionalista"], c: 0 },
+                { q: "Melyik európai pártcsaládhoz tartoznak az EP-ben?", a: ["Európai Néppárt", "Szocialisták és Demokraták (S&D)", "Identitás és Demokrácia"], c: 1 },
+                { q: "Milyen jelzővel illeti magát gyakran a párt?", a: ["Kereszténydemokrata", "Nemzeti-radikális", "A legelkötelezettebb európai"], c: 2 },
+                { q: "Ki a párt egyik legismertebb női politikusa, az EP korábbi alelnöke?", a: ["Dobrev Klára", "Kunhalmi Ágnes", "Varga Judit"], c: 0 },
+                { q: "Melyik választáson szerepelt először önállóan a DK?", a: ["2010-es országgyűlési", "2014-es EP-választás", "1998-as önkormányzati"], c: 1 },
+                { q: "Hogy hívják a párt által létrehozott online médiafelületet?", a: ["Pesti Srácok", "Hír TV", "DK TV"], c: 2 },
+                { q: "Melyik társadalmi réteg körében a legerősebb a párt támogatottsága?", a: ["Idősebb városi szavazók", "Vidéki kisgazdák", "Egyetemista fiatalok"], c: 0 },
+                { q: "Mi volt a DK jogelődje a párttá alakulás előtt?", a: ["Egy civil mozgalom", "Platform az MSZP-n belül", "Sportegyesület"], c: 1 },
+                { q: "Melyik városban tartja a DK a legnagyobb rendezvényeit?", a: ["Debrecen", "Sopron", "Budapest"], c: 2 },
+                { q: "Hányadik helyen végzett a DK a 2019-es EP-választáson a listák között?", a: ["Második", "Ötödik", "Első"], c: 0 },
+                { q: "Melyik kifejezés a párt gazdaságpolitikájának alapja?", a: ["Szabadpiaci fundamentalizmus", "Szociális piacgazdaság", "Tervgazdaság"], c: 1 },
+                { q: "Melyik testületben van jelenleg is frakciója a DK-nak?", a: ["Jegybank", "Kúria", "Országgyűlés"], c: 2 },
+                { q: "Mi a véleménye a DK-nak a határon túli magyarok szavazati jogáról?", a: ["Kritikus / elutasító", "Teljes mértékben támogatja", "Még több jogot adna"], c: 0 },
+                { q: "Ki a párt frakcióvezetője a magyar parlamentben?", a: ["Orbán Viktor", "Gyurcsány Ferenc", "Toroczkai László"], c: 1 }
+            ]
+            },
+            'mihazank': {
+            title: "Mi Hazánk Mozgalom Kvíz (20 kérdés)",
+            questions: [
+                { q: "Melyik évben alakult meg a Mi Hazánk Mozgalom?", a: ["2018", "2010", "2022"], c: 0 },
+                { q: "Ki a párt elnöke és alapítója?", a: ["Dúró Dóra", "Toroczkai László", "Novák Előd"], c: 1 },
+                { q: "Melyik korábbi pártból váltak ki az alapító tagok?", a: ["Fidesz", "MSZP", "Jobbik"], c: 2 },
+                { q: "Melyik városban bontott zászlót a mozgalom?", a: ["Ásotthalom", "Budapest", "Debrecen"], c: 0 },
+                { q: "Ki a párt egyik legismertebb női politikusa, az Országgyűlés alelnöke?", a: ["Varga Judit", "Dúró Dóra", "Szabó Tímea"], c: 1 },
+                { q: "Melyik nemzetközi pártcsaládhoz (EP frakció) csatlakoztak 2024-ben?", a: ["Európai Néppárt", "S&D", "Szuverén Nemzetek Európája"], c: 2 },
+                { q: "Milyen ideológiai irányzathoz sorolják a pártot?", a: ["Radikális jobboldal", "Liberális közép", "Kommunista"], c: 0 },
+                { q: "Hány százalékot értek el a 2022-es országgyűlési választáson?", a: ["3%", "6% felett", "15%"], c: 1 },
+                { q: "Mi a párt véleménye Magyarország EU-tagságáról?", a: ["Feltétel nélküli támogatás", "Európai Egyesült Államok", "Népszavazást tartanának a kilépésről"], c: 2 },
+                { q: "Melyik társadalmi kérdésben foglaltak el éles elutasító álláspontot a COVID alatt?", a: ["Kötelező oltás / lezárások", "Digitális oktatás", "Távmunka"], c: 0 },
+                { q: "Melyik szervezet alapítása köthető a párthoz a rendvédelem kapcsán?", a: ["Vöröskereszt", "Magyar Önvédelmi Mozgalom", "Cserkészszövetség"], c: 1 },
+                { q: "Melyik jelkép használata jellemző a párt rendezvényein?", a: ["Vörös csillag", "Szivárványos zászló", "Árpádsávos zászló"], c: 2 },
+                { q: "Melyik országgyűlési testületben van saját frakciója a pártnak?", a: ["Magyar Országgyűlés", "ENSZ Bizottság", "Vatikáni Tanács"], c: 0 },
+                { q: "Hogyan viszonyul a párt a sorkatonaság kérdéséhez?", a: ["Eltörölnék örökre", "Visszaállítanák az önkéntes/kötelező jellegét", "Nem foglalkoznak vele"], c: 1 },
+                { q: "Mi a párt álláspontja a végrehajtói rendszerrel kapcsolatban?", a: ["Támogatják a jelenlegit", "Kibővítenék a jogköreiket", "Államosítanák és nonprofit alapra helyeznék"], c: 2 },
+                { q: "Ki volt a párt EP-listavezetője 2024-ben?", a: ["Toroczkai László", "Budaházy György", "Schiffer András"], c: 0 },
+                { q: "Melyik szomszédos ország revíziójával kapcsolatban tesznek néha utalásokat?", a: ["Ausztria", "Ukrajna (Kárpátalja)", "Szlovénia"], c: 1 },
+                { q: "Melyik évben szereztek először mandátumot az Európai Parlamentben?", a: ["2014", "2019", "2024"], c: 2 },
+                { q: "Mi a párt fő üzenete a migrációval kapcsolatban?", a: ["Zéró tolerancia / kerítés", "Befogadás és integráció", "Kvóta-rendszer támogatása"], c: 0 },
+                { q: "Ki a párt alelnöke, aki korábban a radikális akcióiról volt ismert?", a: ["Gyöngyösi Márton", "Novák Előd", "Ujhelyi István"], c: 1 }
+            ]
+            },
+            'mkkp': {
+            title: "Magyar Kétfarkú Kutya Párt Kvíz",
+            questions: [
+                { q: "Melyik évben alakult meg viccpártként az MKKP Szegeden?", a: ["2006", "2010", "2014"], c: 0 },
+                { q: "Ki a párt egyik társelnöke és legismertebb alapítója?", a: ["Döme Zsuzsanna", "Kovács Gergely", "Mogács Dániel"], c: 1 },
+                { q: "Melyik állat a párt kabalája és névadója?", a: ["Háromfejű sárkány", "Egyszarvú", "Kétfarkú kutya"], c: 2 },
+                { q: "Melyik abszurd ígéret volt a párt egyik legelső szlogenje?", a: ["Örök élet, ingyen sör", "Adómentes benzin", "Alanyi jogon járó wifi"], c: 0 },
+                { q: "Melyik budapesti kerületben lett Kovács Gergely polgármester 2024-ben?", a: ["II. kerület", "XII. kerület", "VII. kerület"], c: 1 },
+                { q: "Milyen típusú akcióiról (városfelújítás) ismert a párt?", a: ["Útlezárások", "Hivatalos petíciók", "Négyszínfestés / kátyúzás"], c: 2 },
+                { q: "Hivatalosan mikor jegyezték be az MKKP-t valódi pártként?", a: ["2014", "2006", "2018"], c: 0 },
+                { q: "Ki a párt másik társelnöke, aki Ferencváros alpolgármestere is volt?", a: ["Vágó István", "Döme Zsuzsanna (Suzy)", "Puzsér Róbert"], c: 1 },
+                { q: "Hogy hívják a párt által létrehozott közösségi/segélyező alapot?", a: ["Soros-terv", "Békemenet alap", "Rózsa Sándor Népi Kampánypénztékozló Alap"], c: 2 },
+                { q: "Melyik választáson értek el először 3% feletti eredményt országosan?", a: ["2022-es országgyűlési", "2014-es önkormányzati", "2010-es EP"], c: 0 },
+                { q: "Melyik ismert humorista volt a párt budapesti főpolgármester-jelöltje korábban?", a: ["Bödőcs Tibor", "Mogács Dániel", "Kőhalmi Zoltán"], c: 1 },
+                { q: "Milyen álláspontot képviselt a párt a 2016-os kvótanépszavazáson?", a: ["Igen", "Nem", "Érvénytelen szavazat (vicces rajzokkal)"], c: 2 },
+                { q: "Melyik európai pártcsaládhoz csatlakoztak 2024-ben az EP-ben?", a: ["Zöldek / Európai Szabad Szövetség", "Európai Néppárt", "Liberálisok"], c: 0 },
+                { q: "Mi a párt véleménye a 'Hülye kérdésekre hülye válaszok' kampányról?", a: ["Elhatárolódnak tőle", "Ez a kommunikációjuk alapja", "Szerintük ez túl komoly"], c: 1 },
+                { q: "Hogyan hívják a párt passzivistáit?", a: ["Szimpatizánsok", "Tagtársak", "Passzivisták"], c: 2 },
+                { q: "Melyik égitestet ígérték meg a magyar népnek a kampány során?", a: ["Mars", "Hold", "Nap"], c: 0 },
+                { q: "Hány képviselőjük jutott be az Európai Parlamentbe 2024-ben?", a: ["Nulla", "Egy", "Három"], c: 1 },
+                { q: "Melyik nagy infrastrukturális beruházást ígérték meg (iróniából)?", a: ["Metró a Holdra", "Déli pályaudvar felújítása", "Hegyet a Nagyalföldre"], c: 2 },
+                { q: "Melyik városi problémára hívják fel a figyelmet a 'Kátyú' versenyekkel?", a: ["Rossz utak", "Kevés parkoló", "Magas bérleti díjak"], c: 0 },
+                { q: "Ki a párt EP képviselője 2024 óta?", a: ["Kovács Gergely", "Baranyi Krisztina", "Le Marietta"], c: 2 }
+            ]
+            },
+        }
 
         let currentQuizQuestions = [];
         let currentQ = 0;
