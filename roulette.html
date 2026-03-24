@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bob-Roulette</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/xiaomi512/bobtok.bob/main/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/xiaomi512/bobtok.bob/main/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/xiaomi512/bobtok.bob/main/favicon-16x16.png">
+        <link rel="manifest" href="https://raw.githubusercontent.com/xiaomi512/bobtok.bob/main/site.webmanifest">
+        <style>
+            .bg-hungary {
+                background: linear-gradient(to right, red, white, green);
+            }
+            /* Kerék stílusai */
+            #wheel-wrapper { position: relative; width: 300px; margin: 20px auto; }
+            #canvas { border-radius: 50%; border: 5px solid #fff; transition: transform 4s cubic-bezier(0.1, 0, 0.2, 1); }
+            #pointer { 
+                position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+                width: 0; height: 0; border-left: 15px solid transparent; 
+                border-right: 15px solid transparent; border-top: 30px solid white; z-index: 10;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 bg-hungary"><h1>Próbálja ki a szerencséjét a rouletten egyenes a Bob által kiszabott nyereményekkel. <a class="btn btn-dark" href="https://xiaomi512.github.io/bobtok.bob/index.html">Vissza</a></h1></div>
+                <div class="col-12 bg-danger">
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <div id="wheel-wrapper">
+                                <div id="pointer"></div>
+                                <canvas id="canvas" width="300" height="300"></canvas>
+                            </div>
+                            <button class="btn btn-dark mb-4" onclick="spin()">Pörgetés!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const canvas = document.getElementById("canvas");
+            const ctx = canvas.getContext("2d");
+            const prizes = ["Bob Matrica", "Ingyen Kávé", "Bob Póló", "Bob Puszi", "Szerencse", "Bögre"];
+            const colors = ["#ff595e", "#ffca3a", "#8ac926", "#1982c4", "#6a4c93", "#f72585"];
+            const arc = Math.PI / (prizes.length / 2);
+            let currentRotation = 0;
+
+            function drawWheel() {
+                prizes.forEach((prize, i) => {
+                    const angle = i * arc;
+                    ctx.fillStyle = colors[i];
+                    ctx.beginPath();
+                    ctx.moveTo(150, 150);
+                    ctx.arc(150, 150, 150, angle, angle + arc);
+                    ctx.fill();
+                    ctx.save();
+                    ctx.translate(150, 150);
+                    ctx.rotate(angle + arc / 2);
+                    ctx.textAlign = "right";
+                    ctx.fillStyle = "white";
+                    ctx.font = "bold 14px Arial";
+                    ctx.fillText(prize, 140, 5);
+                    ctx.restore();
+                });
+            }
+
+            function spin() {
+                const extraDegrees = Math.floor(Math.random() * 360) + 1800; // 5 teljes kör + véletlen
+                currentRotation += extraDegrees;
+                canvas.style.transform = `rotate(${currentRotation}deg)`;
+
+                setTimeout(() => {
+                    const actualAngle = (currentRotation % 360);
+                    const prizeIndex = Math.floor((360 - (actualAngle - 270) % 360) % 360 / (360 / prizes.length));
+                    alert("Gratulálunk! Ön nyert egy " + prizes[prizeIndex] + "-t Bobtól!");
+                }, 4000);
+            }
+
+            drawWheel();
+        </script>
+    </body>
+</html>
